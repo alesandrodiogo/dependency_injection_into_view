@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var numero = 10;
+}
+
+@inject Demo05.Models.Carros carros
+
+@numero = @(10*2)
+
+
+@foreach(var item in carros.ListarCarros()){
+    <h1>@item.Nome - @item.Marca</h1>
+}
